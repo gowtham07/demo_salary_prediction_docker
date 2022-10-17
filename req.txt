@@ -1,0 +1,8 @@
+pandas
+argparse
+joblib
+#logging
+#copy
+#os
+pathlib
+scikit-learn
