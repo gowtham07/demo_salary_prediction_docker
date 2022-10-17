@@ -1,4 +1,13 @@
 # SalaryPrediction_SimpleLinearRegression_Model
 
-Blog url -
-https://pratik26.medium.com/machine-learning-model-on-docker-container-da4dd51b03cd
+To run the model
+
+docker run -it salary python3 /salary/test.py  --years 22 --res './'
+
+To get to see the contents of the container like saved model etc use the below two commands
+
+docker commit 217e723179c8 user/test_image
+
+docker run -ti --entrypoint=sh user/test_image
+
+
