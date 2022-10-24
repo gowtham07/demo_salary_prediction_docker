@@ -1,13 +1,16 @@
 # SalaryPrediction_SimpleLinearRegression_Model
 
+
 To run the model
 
-docker run -it salary python3 /salary/test.py  --years 22 --res './'
+docker run -d -v /home/gowtham/Documents/SalaryPrediction_SimpleLinearRegression_Model-main:/salary/ -it demo-salary python3 /salary/test.py --years 22 --res './salary'
 
-To get to see the contents of the container like saved model etc use the below two commands
+The above commmand will Mount a volume in your container mapped to the desired path in your host
 
-docker commit 217e723179c8 user/test_image
+generic command would be docker run -d -v /host/path:/python_app/output your_docker_image
 
-docker run -ti --entrypoint=sh user/test_image
+As an alternative To get to see the contents of the container like saved model etc use the below two commands
 
+docker commit your_container_id your_image_name
 
+docker run -ti --entrypoint=sh your_image_name
